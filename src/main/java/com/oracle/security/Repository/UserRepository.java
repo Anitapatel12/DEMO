@@ -10,4 +10,5 @@ public interface UserRepository
     Optional<AppUser> findByUsername(String
                                              username);
     boolean existsByUsername(String username);
+    String Username(String username);
 }
