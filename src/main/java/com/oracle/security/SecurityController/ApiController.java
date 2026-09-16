@@ -2,6 +2,7 @@ package com.oracle.security.SecurityController;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,16 @@ public class ApiController {
     public String m1(){
         return "hello";
     }
+    @GetMapping("/user")
+    public String m2(){
+        return "hello";
+    }
+    @PostMapping("/user")
+    public String m3(){
+        return "post running";
+    }
+
+
 
     @GetMapping("/me")
     public String me(Authentication auth) {
