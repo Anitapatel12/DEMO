@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class ApiController {
+    @GetMapping("/{id}")
+    public String m1(){
+        return "hello";
+    }
+
     @GetMapping("/me")
     public String me(Authentication auth) {
         return "API user: " + auth.getName();
